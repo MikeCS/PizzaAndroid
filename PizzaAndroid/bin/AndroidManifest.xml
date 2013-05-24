@@ -24,6 +24,8 @@
         </activity>
         <activity android:name="MainMenuActivity"></activity>
         <activity android:name="KitchenActivity"></activity>
+        <activity android:name="HaveActivity"></activity>
+        <activity android:name="DelivActivity"></activity>
     </application>
 
 </manifest>

@@ -2,6 +2,13 @@
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    
+
+    <Button
+        android:id="@+id/btnExitH"
+        android:layout_width="192dp"
+        android:layout_height="73dp"
+        android:layout_x="62dp"
+        android:layout_y="370dp"
+        android:text="Назад" />
 
 </AbsoluteLayout>
