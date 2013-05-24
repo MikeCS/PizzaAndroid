@@ -26,6 +26,7 @@
         <activity android:name="KitchenActivity"></activity>
         <activity android:name="HaveActivity"></activity>
         <activity android:name="DelivActivity"></activity>
+        <activity android:name="DoneActivity"></activity>
     </application>
 
 </manifest>

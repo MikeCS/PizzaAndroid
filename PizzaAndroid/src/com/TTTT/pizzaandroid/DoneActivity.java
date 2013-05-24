@@ -8,19 +8,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class DelivActivity extends Activity implements OnClickListener {
+public class DoneActivity extends Activity implements OnClickListener {
 
-	Button btnExitD;
-	Button btnDone;
+Button btnOKDone;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.deliv_layout);
-		btnExitD = (Button) findViewById(R.id.btnExitD);
-		btnExitD.setOnClickListener(this);
-		btnDone = (Button) findViewById(R.id.btnDone);
-		btnDone.setOnClickListener(this);
+		setContentView(R.layout.done_layout);
+		btnOKDone = (Button) findViewById(R.id.btnOKDone);
+		btnOKDone.setOnClickListener(this);
 	}
 
 	@Override
@@ -33,14 +30,9 @@ public class DelivActivity extends Activity implements OnClickListener {
 	@Override
 	  public void onClick(View v) {
 	    switch (v.getId()) {
-	    case R.id.btnExitD:
+	    case R.id.btnOKDone:
 	    	Intent intent = new Intent(this, MainMenuActivity.class);
 	        startActivity(intent);
-	      // TODO Call second activity
-	      break;
-	    case R.id.btnDone:
-	    	Intent intent2 = new Intent(this, DoneActivity.class);
-	        startActivity(intent2);
 	      // TODO Call second activity
 	      break;
 	    default:
@@ -49,4 +41,3 @@ public class DelivActivity extends Activity implements OnClickListener {
 	}	
 	
 }
-
