@@ -69,7 +69,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
-                android:id="@+id/AdressText"
+                android:id="@+id/AddressText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -89,7 +89,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
-                android:id="@+id/countText"
+                android:id="@+id/countText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -112,11 +112,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_x="140dp"
-                android:layout_y="0dp" />
+                android:layout_x="153dp"
+                android:layout_y="0dp"
+                android:checked="false"
+                android:clickable="false"
+                android:visibility="invisible" />
 
         </AbsoluteLayout>
 
