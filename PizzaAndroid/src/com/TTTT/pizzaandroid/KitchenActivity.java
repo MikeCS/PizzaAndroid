@@ -27,6 +27,7 @@ TextView TypeText;
 TextView CountText;
 TextView AddressText;
 CheckBox Status;
+boolean first = true;
 
 	
 	@Override
@@ -77,9 +78,15 @@ CheckBox Status;
 		Spinner spinner = (Spinner) findViewById(R.id.spinner);
 		spinner.setAdapter(adapter);
 		spinner.setPrompt("Выбериите заказ, чтобы получить инфо");
+
+        
+        
+        
+        
 		spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 	        @Override
 	        public void onNothingSelected(AdapterView<?> parent) {
+	        	 
 	        }
 	        @Override
 	        public void onItemSelected(AdapterView<?> parent, View view,
@@ -87,15 +94,24 @@ CheckBox Status;
 				// Set adapter flag that something has been chosen	
 	            CustomAdapter.flag = true;  
 	          
-	            TimeText.setText(orders.get(pos).Time);
-	            TypeText.setText(orders.get(pos).Type);
-	            CountText.setText(orders.get(pos).Count);
-	            AddressText.setText(orders.get(pos).Address);
-	            Status.setChecked(orders.get(pos).Status);
-	            Status.setVisibility(1);
-	            
-	            
-	            
+	           /* if (first)
+	            {
+	            	TimeText.setText("");
+	                TypeText.setText("");
+	                CountText.setText("");
+	                AddressText.setText("");
+	                Status.setChecked(false);
+	                first = false;
+	            }*/
+	            //else
+	            {
+	            	TimeText.setText(orders.get(pos).Time);
+		            TypeText.setText(orders.get(pos).Type);
+		            CountText.setText(orders.get(pos).Count);
+		            AddressText.setText(orders.get(pos).Address);
+		            Status.setChecked(orders.get(pos).Status);
+		            Status.setVisibility(1);
+	            }
 	       }
 		});
 	}
