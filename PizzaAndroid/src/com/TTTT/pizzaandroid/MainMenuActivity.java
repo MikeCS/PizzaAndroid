@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainMenuActivity extends Activity implements OnClickListener{
 
@@ -18,6 +19,11 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_menu);
+		if (MainActivity.count == 0)
+		{
+			Toast.makeText(this, "Добро пожаловать в систему", Toast.LENGTH_LONG).show();
+			MainActivity.count++;
+		}
 		btnExitMain = (Button) findViewById(R.id.btnExitMain);
 	    btnExitMain.setOnClickListener(this);
 	    btnKitchen = (Button) findViewById(R.id.btnKitchen);
@@ -34,6 +40,7 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 	    case R.id.btnExitMain:
 	    	Intent intent = new Intent(this, MainActivity.class);
 	        startActivity(intent);
+	        MainActivity.count = 0;
 	      // TODO Call second activity
 	      break;
 	    case R.id.btnKitchen:

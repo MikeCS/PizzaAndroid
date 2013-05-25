@@ -13,12 +13,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/logView"
         android:layout_width="181dp"
         android:layout_height="wrap_content"
         android:layout_x="130dp"
         android:layout_y="156dp"
-        android:ems="10" >
+        android:ems="10"
+        android:hint="Введите логин" >
 
         <requestFocus />
     </EditText>
@@ -33,12 +34,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/PassView"
         android:layout_width="181dp"
         android:layout_height="wrap_content"
         android:layout_x="128dp"
         android:layout_y="210dp"
         android:ems="10"
+        android:hint="Введите пароль"
         android:inputType="textPassword" />
 
     <Button

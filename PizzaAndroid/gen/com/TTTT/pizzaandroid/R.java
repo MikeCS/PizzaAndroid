@@ -24,6 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static final int PassView=0x7f080009;
         public static final int action_settings=0x7f080010;
         public static final int btnDeliv=0x7f08000c;
         public static final int btnDone=0x7f080000;
@@ -35,8 +36,7 @@ public final class R {
         public static final int btnKitchen=0x7f08000b;
         public static final int btnOKDone=0x7f080003;
         public static final int digitalClock1=0x7f08000f;
-        public static final int editText1=0x7f080008;
-        public static final int editText2=0x7f080009;
+        public static final int logView=0x7f080008;
         public static final int loginButton=0x7f08000a;
         public static final int spinner_id=0x7f080002;
         public static final int textView1=0x7f080004;
