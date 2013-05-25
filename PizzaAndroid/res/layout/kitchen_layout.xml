@@ -11,13 +11,6 @@
         android:layout_y="368dp"
         android:text="Назад" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_x="2dp"
-        android:layout_y="12dp" />
-
     <LinearLayout
         android:layout_width="305dp"
         android:layout_height="224dp"
@@ -129,6 +122,13 @@
 
     </LinearLayout>
 
-   
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="301dp"
+        android:layout_height="52dp"
+        android:layout_x="10dp"
+        android:layout_y="16dp" >
+
+    </Spinner>
 
 </AbsoluteLayout>
