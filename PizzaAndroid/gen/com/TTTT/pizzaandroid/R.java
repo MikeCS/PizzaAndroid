@@ -24,23 +24,33 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int PassView=0x7f080009;
-        public static final int action_settings=0x7f080010;
-        public static final int btnDeliv=0x7f08000c;
+        public static final int AdressT=0x7f080004;
+        public static final int AdressText=0x7f08000c;
+        public static final int Count=0x7f08000d;
+        public static final int PassView=0x7f080013;
+        public static final int StatusT=0x7f08000f;
+        public static final int StatusTV=0x7f080011;
+        public static final int TimeT=0x7f080008;
+        public static final int TimeText=0x7f080009;
+        public static final int TypeT=0x7f08000a;
+        public static final int TypeText=0x7f08000b;
+        public static final int action_settings=0x7f08001a;
+        public static final int btnDeliv=0x7f080016;
         public static final int btnDone=0x7f080000;
         public static final int btnExitD=0x7f080001;
         public static final int btnExitH=0x7f080005;
         public static final int btnExitK=0x7f080006;
-        public static final int btnExitMain=0x7f08000e;
-        public static final int btnHave=0x7f08000d;
-        public static final int btnKitchen=0x7f08000b;
+        public static final int btnExitMain=0x7f080018;
+        public static final int btnHave=0x7f080017;
+        public static final int btnKitchen=0x7f080015;
         public static final int btnOKDone=0x7f080003;
-        public static final int digitalClock1=0x7f08000f;
-        public static final int logView=0x7f080008;
-        public static final int loginButton=0x7f08000a;
+        public static final int checkBox2=0x7f080010;
+        public static final int countText=0x7f08000e;
+        public static final int digitalClock1=0x7f080019;
+        public static final int logView=0x7f080012;
+        public static final int loginButton=0x7f080014;
+        public static final int spinner1=0x7f080007;
         public static final int spinner_id=0x7f080002;
-        public static final int textView1=0x7f080004;
-        public static final int textView2=0x7f080007;
     }
     public static final class layout {
         public static final int deliv_layout=0x7f030000;
