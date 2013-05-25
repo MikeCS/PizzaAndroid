@@ -56,8 +56,7 @@ Button btnExitK;
 		
 		Spinner spinner = (Spinner) findViewById(R.id.spinner);
 		spinner.setAdapter(adapter);
-		//spinner.setPrompt("Title");
-       // spinner.setSelection(2);
+		spinner.setPrompt("Выбериите выполненный заказ");
 	}
 
 	@Override
