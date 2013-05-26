@@ -11,4 +11,125 @@
         android:layout_y="370dp"
         android:text="Назад" />
 
+
+ <LinearLayout
+        android:layout_width="305dp"
+        android:layout_height="224dp"
+        android:layout_x="6dp"
+        android:layout_y="98dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/TimeT3"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:text="Time:  "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/TimeText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp" >
+
+            <TextView
+                android:id="@+id/TypeT3"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:text="Type:  "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/TypeText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/AdressT3"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:text="Adress:  "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/AddressText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/Count3"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:text="Count:  "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/countText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+        <AbsoluteLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/StatusT3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="-1dp"
+                android:layout_y="8dp"
+                android:text="Status:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="153dp"
+                android:layout_y="0dp"
+                android:checked="false"
+                android:clickable="false"
+                android:visibility="invisible" />
+
+        </AbsoluteLayout>
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="294dp"
+        android:layout_height="58dp"
+        android:layout_x="10dp"
+        android:layout_y="21dp" />
+
 </AbsoluteLayout>
