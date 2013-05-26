@@ -1,5 +1,7 @@
 package com.TTTT.pizzaandroid;
 
+import java.util.ArrayList;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -16,7 +18,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	EditText logView;
 	EditText PassView;
 	static int count = 0;
-	
+	//>>>>>>>>>>>>>>>>>>>>>
+	final static ArrayList<Order> ordersStat = new ArrayList<Order>();
+	static int selected = -2;
+	//>>>>>>>>>>>>>>>>>>>>>
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,6 +30,27 @@ public class MainActivity extends Activity implements OnClickListener {
 	    okButton.setOnClickListener(this);
 	    logView =(EditText) findViewById(R.id.logView);
 	    PassView =(EditText) findViewById(R.id.PassView);
+	    
+	    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		Order order1 = new Order();
+		order1.Time = "18:12";
+		order1.Type = "Avalon";
+		order1.Count = "1";
+		order1.Address = "Ленина 25, кв. 48";
+		order1.Status = true;
+		
+		Order order2 = new Order();
+		order2.Time = "17:52";
+		order2.Type = "Orlean";
+		order2.Count = "1";
+		order2.Address = "25 января 67, кв 98";
+		order2.Status = true;
+		
+		
+		ordersStat.add(order1);
+		ordersStat.add(order2);
+	    //>>>>>>>>>>>>>>>>>>>>>>>>>>
+	    
 	}
 
 	@Override

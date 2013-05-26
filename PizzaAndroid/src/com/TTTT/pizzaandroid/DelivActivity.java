@@ -18,7 +18,7 @@ public class DelivActivity extends Activity implements OnClickListener {
 
 	Button btnExitD;
 	Button btnDone;
-	int selected = -2;
+	int sel;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,27 +29,14 @@ public class DelivActivity extends Activity implements OnClickListener {
 		btnDone = (Button) findViewById(R.id.btnDone);
 		btnDone.setOnClickListener(this);
 		
-		final ArrayList<Order> orders = new ArrayList<Order>();
+		String data[] = new String[MainActivity.ordersStat.size()];
 		
-		Order order1 = new Order();
-		order1.Time = "18:12";
-		order1.Type = "Avalon";
-		order1.Count = "1";
-		order1.Address = "Ленина 25, кв. 48";
-		order1.Status = true;
-		
-		Order order2 = new Order();
-		order2.Time = "17:52";
-		order2.Type = "Orlean";
-		order2.Count = "1";
-		order2.Address = "25 января 67, кв 98";
-		order2.Status = true;
+		for (int i = 0; i<MainActivity.ordersStat.size(); i++)
+		{
+			data[i] = MainActivity.ordersStat.get(i).Time + " " + MainActivity.ordersStat.get(i).Address;
+		}
 		
 		
-		orders.add(order1);
-		orders.add(order2);
-		
-		String[] data = {order1.Time + " " + order1.Address, order2.Time + " " + order2.Address};
 		//>>>>>>>>>>>>><<<<<<<<<<<<<
 		
 		CustomAdapter adapter = new CustomAdapter(this, android.R.layout.simple_spinner_item, data);
@@ -68,8 +55,8 @@ public class DelivActivity extends Activity implements OnClickListener {
 	                int pos, long id) {
 				// Set adapter flag that something has been chosen	
 	            CustomAdapter.flag = true;  
-	          
-	         selected++;
+	         sel = pos; 
+	         MainActivity.selected++;
 	       }
 		});
 	}
@@ -93,12 +80,13 @@ public class DelivActivity extends Activity implements OnClickListener {
 	      break;
 	    case R.id.btnDone:
 
-	        if (selected == -1)
+	        if (MainActivity.selected == -1)
 	        	Toast.makeText(this, "Выберите заказ", Toast.LENGTH_LONG).show();
 	        else
 	        {
-	    	Intent intent2 = new Intent(this, DoneActivity.class);
-	        startActivity(intent2);
+	        	MainActivity.ordersStat.remove(sel);
+	        	Intent intent2 = new Intent(this, DoneActivity.class);
+	        	startActivity(intent2);
 	        }
 	        
 	      // TODO Call second activity
