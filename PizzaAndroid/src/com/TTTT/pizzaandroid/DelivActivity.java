@@ -18,7 +18,7 @@ public class DelivActivity extends Activity implements OnClickListener {
 
 	Button btnExitD;
 	Button btnDone;
-	int selected = -1;
+	int selected = -2;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,7 @@ public class DelivActivity extends Activity implements OnClickListener {
 				// Set adapter flag that something has been chosen	
 	            CustomAdapter.flag = true;  
 	          
-	         selected = pos;
+	         selected++;
 	       }
 		});
 	}
@@ -86,20 +86,20 @@ public class DelivActivity extends Activity implements OnClickListener {
 	    switch (v.getId()) {
 	    case R.id.btnExitD:
 
+		    	Intent intent = new Intent(this, MainMenuActivity.class);
+		        startActivity(intent);
+
+	      // TODO Call second activity
+	      break;
+	    case R.id.btnDone:
+
 	        if (selected == -1)
 	        	Toast.makeText(this, "Выберите заказ", Toast.LENGTH_LONG).show();
 	        else
 	        {
-		    	Intent intent = new Intent(this, MainMenuActivity.class);
-		        startActivity(intent);
-	        }
-	        	
-	      // TODO Call second activity
-	      break;
-	    case R.id.btnDone:
-	    	
 	    	Intent intent2 = new Intent(this, DoneActivity.class);
 	        startActivity(intent2);
+	        }
 	        
 	      // TODO Call second activity
 	      break;
