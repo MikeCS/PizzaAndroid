@@ -66,6 +66,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	    case R.id.loginButton:
 	    	Intent intent = new Intent(this, MainMenuActivity.class);
 	    	//>>>>>>>>>
+	    //	okButton.setBackgroundResource();
 	    	if ((logView.getText().toString().equals("admin")) && (PassView.getText().toString().equals("1234")))
 	    	{	
 	    		logView.setText("");

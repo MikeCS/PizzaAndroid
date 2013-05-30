@@ -20,7 +20,7 @@
         android:layout_x="130dp"
         android:layout_y="156dp"
         android:ems="10"
-        android:hint="Введите логин" >
+        android:hint="Введите логин">
 
         <requestFocus />
     </EditText>
@@ -50,6 +50,9 @@
         android:layout_height="91dp"
         android:layout_x="85dp"
         android:layout_y="326dp"
-        android:text="OK" />
+        android:text="OK"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/butsel" />
 
 </AbsoluteLayout>
