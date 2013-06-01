@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <EditText
+        android:id="@+id/logView"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_x="212dp"
+        android:layout_y="58dp"
+        android:ems="10"
+        android:hint="Введите логин" />
+
+    <TextView
+        android:id="@+id/StatusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="108dp"
+        android:layout_y="123dp"
+        android:text="Password"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/AdressT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="110dp"
+        android:layout_y="66dp"
+        android:text="Login"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/PassView"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_x="210dp"
+        android:layout_y="112dp"
+        android:ems="10"
+        android:hint="Введите пароль"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="148dp"
+        android:layout_height="91dp"
+        android:layout_x="193dp"
+        android:layout_y="166dp"
+        android:background="@drawable/butsel"
+        android:text="OK"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</AbsoluteLayout>

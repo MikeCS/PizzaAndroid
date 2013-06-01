@@ -3,15 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background" >
-    
-    <Button
-        android:id="@+id/btnDone"
-        android:layout_width="227dp"
-        android:layout_height="110dp"
-        android:layout_x="50dp"
-        android:layout_y="230dp"
-        android:background="@drawable/butmenu"
-        android:text="Выполнено" />
 
     <Button
         android:id="@+id/btnExitD"
@@ -28,5 +19,14 @@
         android:layout_height="wrap_content"
         android:layout_x="20dp"
         android:layout_y="97dp" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="227dp"
+        android:layout_height="110dp"
+        android:layout_x="65dp"
+        android:layout_y="100dp"
+        android:background="@drawable/butmenu"
+        android:text="Выполнено" />
 
 </AbsoluteLayout>
