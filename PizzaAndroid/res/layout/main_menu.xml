@@ -10,6 +10,7 @@
         android:layout_height="84dp"
         android:layout_x="51dp"
         android:layout_y="98dp"
+        android:background="@drawable/butmenu"
         android:text="Заказы на кухне" />
 
     <Button
@@ -18,6 +19,7 @@
         android:layout_height="84dp"
         android:layout_x="51dp"
         android:layout_y="300dp"
+        android:background="@drawable/butmenu"
         android:text="Отметить доставку" />
 
     <Button
@@ -26,6 +28,7 @@
         android:layout_height="84dp"
         android:layout_x="52dp"
         android:layout_y="199dp"
+        android:background="@drawable/butmenu"
         android:text="Заказы в наличии" />
 
     <Button
@@ -34,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_x="105dp"
         android:layout_y="406dp"
+        android:background="@drawable/butmenu"
         android:text="Выход" />
 
     <DigitalClock
