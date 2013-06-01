@@ -4,29 +4,29 @@
     android:layout_height="match_parent"
     android:background="@drawable/background" >
 
-    <Button
-        android:id="@+id/btnExitD"
-        android:layout_width="188dp"
-        android:layout_height="78dp"
-        android:layout_x="72dp"
-        android:layout_y="368dp"
-        android:background="@drawable/butmenu"
-        android:text="Назад" />
-
     <Spinner
         android:id="@+id/spinner_id"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
-        android:layout_x="20dp"
-        android:layout_y="97dp" />
+        android:layout_x="138dp"
+        android:layout_y="24dp" />
 
     <Button
         android:id="@+id/btnDone"
         android:layout_width="227dp"
         android:layout_height="110dp"
-        android:layout_x="65dp"
-        android:layout_y="100dp"
+        android:layout_x="275dp"
+        android:layout_y="138dp"
         android:background="@drawable/butmenu"
         android:text="Выполнено" />
+
+    <Button
+        android:id="@+id/btnExitD"
+        android:layout_width="188dp"
+        android:layout_height="78dp"
+        android:layout_x="25dp"
+        android:layout_y="156dp"
+        android:background="@drawable/butmenu"
+        android:text="Назад" />
 
 </AbsoluteLayout>

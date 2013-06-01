@@ -4,22 +4,23 @@
     android:layout_height="match_parent"
     android:background="@drawable/background" >
 
-    <Button
-        android:id="@+id/btnOKDone"
-        android:layout_width="184dp"
-        android:layout_height="106dp"
-        android:layout_x="74dp"
-        android:layout_y="323dp"
-        android:background="@drawable/butmenu"
-        android:text="OK" />
-
     <TextView
         android:id="@+id/AdressT"
         android:layout_width="198dp"
         android:layout_height="146dp"
-        android:layout_x="74dp"
-        android:layout_y="114dp"
+        android:layout_x="33dp"
+        android:layout_y="62dp"
+        android:gravity="center"
         android:text="Изменения в базу данных внесены, теперь можете вернуться в главное меню"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnOKDone"
+        android:layout_width="184dp"
+        android:layout_height="106dp"
+        android:layout_x="301dp"
+        android:layout_y="82dp"
+        android:background="@drawable/butmenu"
+        android:text="OK" />
 
 </AbsoluteLayout>

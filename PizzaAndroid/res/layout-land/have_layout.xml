@@ -4,21 +4,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/background" >
 
-    <Button
-        android:id="@+id/btnExitH"
-        android:layout_width="192dp"
-        android:layout_height="73dp"
-        android:layout_x="62dp"
-        android:layout_y="370dp"
-        android:background="@drawable/butmenu"
-        android:text="Назад" />
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="294dp"
+        android:layout_height="49dp"
+        android:layout_x="227dp"
+        android:layout_y="12dp" />
 
-
- <LinearLayout
-        android:layout_width="305dp"
-        android:layout_height="224dp"
-        android:layout_x="6dp"
-        android:layout_y="98dp"
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="231dp"
+        android:layout_x="22dp"
+        android:layout_y="22dp"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -37,7 +34,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -55,9 +51,7 @@
                 android:id="@+id/TypeText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -75,9 +69,7 @@
                 android:id="@+id/AddressText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -95,9 +87,7 @@
                 android:id="@+id/countText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </LinearLayout>
 
         <AbsoluteLayout
@@ -122,16 +112,16 @@
                 android:checked="false"
                 android:clickable="false"
                 android:visibility="invisible" />
-
         </AbsoluteLayout>
-
     </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="294dp"
-        android:layout_height="58dp"
-        android:layout_x="10dp"
-        android:layout_y="21dp" />
+    <Button
+        android:id="@+id/btnExitH"
+        android:layout_width="192dp"
+        android:layout_height="73dp"
+        android:layout_x="309dp"
+        android:layout_y="170dp"
+        android:background="@drawable/butmenu"
+        android:text="Назад" />
 
 </AbsoluteLayout>

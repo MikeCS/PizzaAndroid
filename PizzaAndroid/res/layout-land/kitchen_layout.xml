@@ -4,20 +4,27 @@
     android:layout_height="match_parent"
     android:background="@drawable/background" >
 
-    <Button
-        android:id="@+id/btnExitK"
-        android:layout_width="194dp"
-        android:layout_height="70dp"
-        android:layout_x="64dp"
-        android:layout_y="368dp"
-        android:background="@drawable/butmenu"
-        android:text="Назад" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="301dp"
+        android:layout_height="52dp"
+        android:layout_x="228dp"
+        android:layout_y="4dp" />
+
+    <TextView
+        android:id="@+id/TimeT"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_x="14dp"
+        android:layout_y="22dp"
+        android:text="Time:  "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <LinearLayout
         android:layout_width="305dp"
         android:layout_height="224dp"
-        android:layout_x="6dp"
-        android:layout_y="98dp"
+        android:layout_x="14dp"
+        android:layout_y="22dp"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -36,7 +43,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -54,9 +60,7 @@
                 android:id="@+id/TypeText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -74,9 +78,7 @@
                 android:id="@+id/AddressText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -94,15 +96,12 @@
                 android:id="@+id/countText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-
         </LinearLayout>
 
         <AbsoluteLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
 
             <TextView
                 android:id="@+id/StatusT"
@@ -122,18 +121,16 @@
                 android:checked="false"
                 android:clickable="false"
                 android:visibility="invisible" />
-
         </AbsoluteLayout>
-
     </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="301dp"
-        android:layout_height="52dp"
-        android:layout_x="10dp"
-        android:layout_y="16dp" >
-
-    </Spinner>
+    <Button
+        android:id="@+id/btnExitK"
+        android:layout_width="194dp"
+        android:layout_height="70dp"
+        android:layout_x="309dp"
+        android:layout_y="169dp"
+        android:background="@drawable/butmenu"
+        android:text="Назад" />
 
 </AbsoluteLayout>
