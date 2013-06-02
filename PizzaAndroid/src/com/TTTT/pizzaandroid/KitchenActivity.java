@@ -1,9 +1,24 @@
 package com.TTTT.pizzaandroid;
 
 import com.TTTT.pizzaandroid.CustomAdapter;
+import com.androidquery.AQuery;
+import com.androidquery.callback.AjaxCallback;
+import com.androidquery.callback.AjaxStatus;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,6 +33,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class KitchenActivity extends Activity implements OnClickListener {
 
@@ -29,6 +45,34 @@ TextView AddressText;
 CheckBox Status;
 boolean first = true;
 
+AQuery aq = new AQuery(this);
+
+public void asyncJson(){
+    
+    //perform a Google search in just a few lines of code
+    
+    String url = "http://192.168.0.101:8080/com.pizza.jersey/rest/auth";
+    
+    aq.ajax(url, String.class, new AjaxCallback<String>() {
+
+            @Override
+            public void callback(String url, String json, AjaxStatus status) {
+                    
+                    
+                    if(json != null){
+                            
+                            //successful ajax call, show status code and json content
+                            Toast.makeText(aq.getContext(), status.getCode() + ":" + json.toString(), Toast.LENGTH_LONG).show();
+                    
+                    }else{
+                            
+                            //ajax error, show error code
+                            Toast.makeText(aq.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG).show();
+                    }
+            }
+    });
+    
+}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +88,79 @@ boolean first = true;
 		//>>>>>>>>>>>>><<<<<<<<<<<<<
 		final ArrayList<Order> orders = new ArrayList<Order>();
 		
+		asyncJson();
+		
+		
+		
+		String responseStr = "хрен";
+		
+	/*	
+		HttpClient httpClient = new DefaultHttpClient();  
+		//String url = "http://localhost:8080/com.pizza.jersey/rest/auth";
+		String url = "http://ya.ru/";
+		HttpGet httpGet = new HttpGet(url);
+		try {
+		    HttpResponse response = httpClient.execute(httpGet);
+		    StatusLine statusLine = response.getStatusLine();
+		   // if (statusLine.getStatusCode() == HttpStatus.SC_OK) 
+		    {
+		        HttpEntity entity = response.getEntity();
+		        ByteArrayOutputStream out = new ByteArrayOutputStream();
+		        entity.writeTo(out);
+		        out.close();
+		        responseStr = out.toString();
+		        // do something with response 
+		    }
+		    /*false {
+		    	responseStr = "не проканало вот тута";
+		        // handle bad response
+		    }
+		} catch (ClientProtocolException e) {
+			responseStr = "не проканало 1";
+		    // handle exception
+		} catch (IOException e) {
+			responseStr = "не проканало 2";
+		    // handle exception
+		}
+		
+		
+		HttpGet uri = new HttpGet("http://ya.ru");    
+
+		DefaultHttpClient client = new DefaultHttpClient();
+		
+		HttpResponse resp;
+		try {
+			resp = client.execute(uri);
+			StatusLine status = resp.getStatusLine();
+			responseStr = resp.getEntity().toString();
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		*/
+		
+		
+		
+		
+		
+
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
 		Order order1 = new Order();
 		order1.Time = "17:45";
-		order1.Type = "Avalon";
+		order1.Type = responseStr;
 		order1.Count = "1";
 		order1.Address = "Набережная 24, кв 56";
 		order1.Status = true;
