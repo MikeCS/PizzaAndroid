@@ -4,6 +4,7 @@ import com.TTTT.pizzaandroid.CustomAdapter;
 import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxCallback;
 import com.androidquery.callback.AjaxStatus;
+import com.androidquery.util.XmlDom;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -23,6 +24,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -46,12 +48,51 @@ CheckBox Status;
 boolean first = true;
 
 AQuery aq = new AQuery(this);
-
+String responseStr = "болт";
+static String temp;
+    
 public void asyncJson(){
+        
+        //perform a Google search in just a few lines of code
+        
+        String url = "http://192.168.0.101:8080/com.pizza.jersey/rest/orders";
+        
+        aq.ajax(url, XmlDom.class, new AjaxCallback<XmlDom>() {
+
+                @Override
+                public void callback(String url, XmlDom xmldom, AjaxStatus status) {
+                        temp = "!!!!";
+                        if(xmldom != null){
+                                
+                                //successful ajax call, show status code and json content
+                        		List<XmlDom> entries = xmldom.tags("order"); 
+                        		for(XmlDom entry: entries){
+                                    
+                                    temp = entry.tag("phone").text();
+                        		}
+                        		
+                        		KitchenActivity.temp = (String) xmldom.tag("phone").text();
+                                Toast.makeText(aq.getContext(),  entries.get(1).tag("phone").text(), Toast.LENGTH_LONG).show();
+                                temp = "6789";
+                               // temp = xmldom.tag("phone").text();
+                        		//aq.getContext();
+                              //  responseStr = xmldom.tag("cost").text().toString();
+                               // Log.d("sdf", "cost");
+                                
+                        
+                        }else{
+                                
+                                //ajax error, show error code
+                                Toast.makeText(aq.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG).show();
+                                responseStr = "я тут";
+                        }
+                }
+                
+        });
+        
+}
     
-    //perform a Google search in just a few lines of code
-    
-    String url = "http://192.168.0.101:8080/com.pizza.jersey/rest/auth";
+    /*String url = "http://192.168.0.101:8080/com.pizza.jersey/rest/auth";
     
     aq.ajax(url, String.class, new AjaxCallback<String>() {
 
@@ -70,9 +111,9 @@ public void asyncJson(){
                             Toast.makeText(aq.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG).show();
                     }
             }
-    });
+    });*/
     
-}
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -86,13 +127,14 @@ public void asyncJson(){
 		AddressText = (TextView) findViewById(R.id.AddressText);
 		Status = (CheckBox) findViewById(R.id.checkBox);
 		//>>>>>>>>>>>>><<<<<<<<<<<<<
+		asyncJson();
 		final ArrayList<Order> orders = new ArrayList<Order>();
 		
-		asyncJson();
 		
 		
 		
-		String responseStr = "хрен";
+		
+		
 		
 	/*	
 		HttpClient httpClient = new DefaultHttpClient();  
@@ -156,7 +198,7 @@ public void asyncJson(){
 		
 		
 		
-		
+		responseStr = KitchenActivity.temp;
 		
 		Order order1 = new Order();
 		order1.Time = "17:45";
